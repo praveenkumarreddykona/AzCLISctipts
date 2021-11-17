@@ -17,4 +17,10 @@ read username
 echo -n 'Enter Password'
 read password
 
-az vm create -n $name -l $region -g AzLearnRG-01 --size $size --admin-username $username --admin-password $password --image $image
+rg=AzLearnRG-0
+
+az vm create -n $name -l $region -g 1 --size $size --admin-username $username --admin-password $password --image $image
+
+sleep 5m
+
+az vm stop -n $name -g $rg
