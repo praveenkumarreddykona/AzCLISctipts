@@ -28,12 +28,10 @@ az vm get-instance-view --resource-group AzLearnRG-01 --name test-vm-01 --query 
 az vm generalize --resource-group AzLearnRG-01 --name test-vm-01
 
 #create a managed image from the vm
-az image create -g AzLearnRG-01 -l eastus -n testImage --os-type Windows --source vmname
+az image create -g AzLearnRG-01 -l eastus -n testImage --os-type Windows --source test-vm-01
 
 #create Image Definition for Shared Image gallery
 Az sig image-definition create --resource AzLearnRG-01 
 
 
-
-
-az vm create --name test4mimage-01 --resource-group AzLearnRG-01 --image testImage --location eastus --size Standard_B2ms --admin-username sysadm --admin-password abcdef@123456 --vnet-name vnet-1-24 --subnet vnsub-01-1-24 --public-ip-address ""
+az vm create --name test4mimage-01 --resource-group AzLearnRG-01 --image testImage --location eastus --size Standard_B2ms --admin-username sysadm --admin-password <password> --vnet-name vnet-1-24 --subnet vnsub-01-1-24 --public-ip-address ""
