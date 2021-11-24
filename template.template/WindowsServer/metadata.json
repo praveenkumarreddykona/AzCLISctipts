@@ -1,7 +1,0 @@
-{
-    "itemDisplayName": "Windows Client",
-    "description": "This template creates an Windows Client instance.",
-    "summary": "Deploys an Windows Client instance in Azure.",
-    "githubUsername": "Praveen",
-    "dateUpdated": "2021-03-20"
-  }
